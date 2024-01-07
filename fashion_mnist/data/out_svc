@@ -1,0 +1,30 @@
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 7126938322000238408
+xla_global_id: -1
+, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 6277824512
+locality {
+  bus_id: 1
+  links {
+  }
+}
+incarnation: 15568853039210568865
+physical_device_desc: "device: 0, name: NVIDIA GeForce RTX 2070 with Max-Q Design, pci bus id: 0000:01:00.0, compute capability: 7.5"
+xla_global_id: 416903419
+]
+training SVM
+SVM Accuracy:  0.90525
+SVM Test Accuracy:  0.90525
+svm best params:  {'kernel': 'rbf', 'C': 7}
+RandomizedSearchCV(cv=StratifiedKFold(n_splits=6, random_state=None, shuffle=False),
+                   estimator=SVC(C=3, kernel='linear'), n_iter=15, n_jobs=-1,
+                   param_distributions={'C': [-3, -1, 1, 3, 5, 7],
+                                        'kernel': ['linear', 'rbf', 'poly']},
+                   scoring='accuracy')
+
+training CNN

@@ -1,0 +1,60 @@
+(D:\conda_envs\tf) PS D:\studie\machine learning practical\Tijn_Amir_Naut\fashion_mnist\data> python preprocessing.py > out
+2023-12-15 21:37:51.584231: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-15 21:37:52.832938: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /device:GPU:0 with 5987 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 2070 with Max-Q Design, pci bus id: 0000:01:00.0, compute capability: 7.5
+D:\conda_envs\tf\lib\site-packages\sklearn\model_selection\_validation.py:425: FitFailedWarning: 
+24 fits failed out of a total of 90.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+6 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\model_selection\_validation.py", line 729, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\base.py", line 1145, in wrapper
+    estimator._validate_params()
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\base.py", line 638, in _validate_params
+    validate_parameter_constraints(
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\utils\_param_validation.py", line 96, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'C' parameter of SVC must be a float in the range (0.0, inf). Got -1 instead.
+
+--------------------------------------------------------------------------------
+18 fits failed with the following error:
+Traceback (most recent call last):
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\model_selection\_validation.py", line 729, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\base.py", line 1145, in wrapper
+    estimator._validate_params()
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\base.py", line 638, in _validate_params
+    validate_parameter_constraints(
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\utils\_param_validation.py", line 96, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'C' parameter of SVC must be a float in the range (0.0, inf). Got -3 instead.
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+D:\conda_envs\tf\lib\site-packages\sklearn\model_selection\_search.py:979: UserWarning: One or more of the test scores are non-finite: [       nan 0.87939583        nan        nan 0.89720833 0.862625
+        nan 0.84322917 0.87533333 0.84829167 0.87772917 0.900875
+ 0.89985417 0.88697917 0.85416667]
+  warnings.warn(
+D:\studie\machine learning practical\Tijn_Amir_Naut\fashion_mnist\data\preprocessing.py:129: DeprecationWarning: KerasClassifier is deprecated, use Sci-Keras (https://github.com/adriangb/scikeras) instead. See https://www.adriangb.com/scikeras/stable/migration.html for help migrating.
+  keras_classifier = KerasClassifier(build_fn=buildModel, epochs=10, batch_size=32, verbose=0)
+Traceback (most recent call last):
+  File "D:\studie\machine learning practical\Tijn_Amir_Naut\fashion_mnist\data\preprocessing.py", line 144, in <module>
+    cnn_results = random_search.fit(X_train.reshape, y_train)
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\base.py", line 1152, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\model_selection\_search.py", line 806, in fit
+    X, y, groups = indexable(X, y, groups)
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\utils\validation.py", line 453, in indexable
+    check_consistent_length(*result)
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\utils\validation.py", line 404, in check_consistent_length
+    lengths = [_num_samples(X) for X in arrays if X is not None]
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\utils\validation.py", line 404, in <listcomp>
+    lengths = [_num_samples(X) for X in arrays if X is not None]
+  File "D:\conda_envs\tf\lib\site-packages\sklearn\utils\validation.py", line 345, in _num_samples
+    raise TypeError(
+TypeError: Singleton array array(<built-in method reshape of numpy.ndarray object at 0x0000014F54889C90>,
+      dtype=object) cannot be considered a valid collection.

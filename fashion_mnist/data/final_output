@@ -1,0 +1,4401 @@
+(D:\conda_envs\tf) PS D:\studie\machine learning practical> & D:/conda_envs/tf/python.exe "d:/studie/machine learning practical/Tijn_Amir_Naut/fashion_mnist/data/preprocessing.py"
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 5639917503133806253
+xla_global_id: -1
+, name: "/device:GPU:0"***
+device_type: "GPU"
+memory_limit: 6277824512
+locality {
+bus_id: 1
+links {
+}
+}
+incarnation: 8323297584704610392
+physical_device_desc: "device: 0, name: NVIDIA GeForce RTX 2070 with Max-Q Design, pci bus id: 0000:01:00.0, compute capability: 7.5"
+xla_global_id: 416903419
+]
+training CNN
+Traceback (most recent call last):
+File "d:\studie\machine learning practical\Tijn_Amir_Naut\fashion_mnist\data\preprocessing.py", line 154, in <module>
+cnn_results = random_search.fit(X_train.reshape(-1, 28, 28, 1), y_train)
+File "D:\conda_envs\tf\lib\site-packages\sklearn\base.py", line 1145, in wrapper
+estimator.\_validate_params()
+File "D:\conda_envs\tf\lib\site-packages\sklearn\base.py", line 638, in \_validate_params
+validate_parameter_constraints(
+File "D:\conda_envs\tf\lib\site-packages\sklearn\utils_param_validation.py", line 96, in validate_parameter_constraints
+raise InvalidParameterError(
+sklearn.utils.\_param_validation.InvalidParameterError: The 'estimator' parameter of RandomizedSearchCV must be an object implementing 'fit'. Got <function buildModel at 0x000001AEEF07D160> instead.
+(D:\conda_envs\tf) PS D:\studie\machine learning practical> & D:/conda_envs/tf/python.exe "d:/studie/machine learning practical/Tijn_Amir_Naut/fashion_mnist/data/preprocessing.py"
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 8054164916786674048
+xla_global_id: -1
+, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 6277824512
+locality {
+bus_id: 1
+links {
+}
+}
+incarnation: 4827802176794602116
+physical_device_desc: "device: 0, name: NVIDIA GeForce RTX 2070 with Max-Q Design, pci bus id: 0000:01:00.0, compute capability: 7.5"
+xla_global_id: 416903419
+]
+training CNN
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Traceback (most recent call last):
+File "d:\studie\machine learning practical\Tijn_Amir_Naut\fashion_mnist\data\preprocessing.py", line 154, in <module>
+cnn_results = random_search.fit(X_train.reshape(-1, 28, 28, 1), y_train)
+File "D:\conda_envs\tf\lib\site-packages\sklearn\base.py", line 1152, in wrapper
+return fit_method(estimator, \*args, \*\*kwargs)
+File "D:\conda_envs\tf\lib\site-packages\sklearn\model_selection_search.py", line 812, in fit
+base_estimator = clone(self.estimator)
+File "D:\conda_envs\tf\lib\site-packages\sklearn\base.py", line 76, in clone
+return \_clone_parametrized(estimator, safe=safe)
+File "D:\conda_envs\tf\lib\site-packages\sklearn\base.py", line 98, in \_clone_parametrized
+raise TypeError(
+TypeError: Cannot clone object '<keras.engine.sequential.Sequential object at 0x000001E22EF0A370>' (type <class 'keras.engine.sequential.Sequential'>): it does not seem to be a scikit-learn estimator as it does not implement a 'get_params' method.
+(D:\conda_envs\tf) PS D:\studie\machine learning practical> & D:/conda_envs/tf/python.exe "d:/studie/machine learning practical/Tijn_Amir_Naut/fashion_mnist/data/preprocessing.py"
+File "d:\studie\machine learning practical\Tijn_Amir_Naut\fashion_mnist\data\preprocessing.py", line 151
+random_search = RandomizedSearchCV(estimator=keras_classifier param_distributions=params_cnn, n_iter=15, cv=kfold_cnn, scoring='accuracy', n_jobs=1)
+^
+SyntaxError: invalid syntax
+(D:\conda_envs\tf) PS D:\studie\machine learning practical> & D:/conda_envs/tf/python.exe "d:/studie/machine learning practical/Tijn_Amir_Naut/fashion_mnist/data/preprocessing.py"
+File "d:\studie\machine learning practical\Tijn_Amir_Naut\fashion_mnist\data\preprocessing.py", line 151
+random_search = RandomizedSearchCV(estimator=keras_classifier param_distributions=params_cnn, n_iter=15, cv=kfold_cnn, scoring='accuracy', n_jobs=1)
+^
+SyntaxError: invalid syntax
+(D:\conda_envs\tf) PS D:\studie\machine learning practical> & D:/conda_envs/tf/python.exe "d:/studie/machine learning practical/Tijn_Amir_Naut/fashion_mnist/data/preprocessing.py"
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 2128968833495972445
+xla_global_id: -1
+, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 6277824512
+locality {
+bus_id: 1
+links {
+}
+}
+incarnation: 700928943850689659
+physical_device_desc: "device: 0, name: NVIDIA GeForce RTX 2070 with Max-Q Design, pci bus id: 0000:01:00.0, compute capability: 7.5"
+xla_global_id: 416903419
+]
+d:\studie\machine learning practical\Tijn_Amir_Naut\fashion_mnist\data\preprocessing.py:145: DeprecationWarning: KerasClassifier is deprecated, use Sci-Keras (https://github.com/adriangb/scikeras) instead. See https://www.adriangb.com/scikeras/stable/migration.html for help migrating.
+keras_classifier = KerasClassifier(build_fn=buildModel, epochs=10, batch_size=16, verbose=1)
+training CNN
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 45s 5ms/step - loss: 0.5436 - accuracy: 0.8052
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4447 - accuracy: 0.8401
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4400 - accuracy: 0.8425
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4355 - accuracy: 0.8448
+Epoch 5/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4258 - accuracy: 0.8491
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4260 - accuracy: 0.8479
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4291 - accuracy: 0.8482
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4290 - accuracy: 0.8461
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4253 - accuracy: 0.8497
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4108 - accuracy: 0.8547
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5472 - accuracy: 0.8041
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4480 - accuracy: 0.8407
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4362 - accuracy: 0.8450
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4318 - accuracy: 0.8464
+Epoch 5/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4247 - accuracy: 0.8469
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4252 - accuracy: 0.8486
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4264 - accuracy: 0.8485
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4243 - accuracy: 0.8482
+Epoch 9/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4195 - accuracy: 0.8487
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4201 - accuracy: 0.8504
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5404 - accuracy: 0.8062
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4456 - accuracy: 0.8418
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4353 - accuracy: 0.8479
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4231 - accuracy: 0.8487
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4183 - accuracy: 0.8516
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4202 - accuracy: 0.8505
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4180 - accuracy: 0.8516
+Epoch 8/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.4104 - accuracy: 0.8537
+Epoch 9/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4142 - accuracy: 0.8552
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4170 - accuracy: 0.8516
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5467 - accuracy: 0.8046
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4489 - accuracy: 0.8396
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4378 - accuracy: 0.8437
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4351 - accuracy: 0.8450
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4256 - accuracy: 0.8491
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4291 - accuracy: 0.8477
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4187 - accuracy: 0.8531
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4187 - accuracy: 0.8500
+Epoch 9/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4135 - accuracy: 0.8515
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4198 - accuracy: 0.8515
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5389 - accuracy: 0.8075
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4467 - accuracy: 0.8420
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4346 - accuracy: 0.8471
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4304 - accuracy: 0.8474
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4239 - accuracy: 0.8482
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4272 - accuracy: 0.8480
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4226 - accuracy: 0.8499
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4169 - accuracy: 0.8506
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4104 - accuracy: 0.8536
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4085 - accuracy: 0.8552
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.7113 - accuracy: 0.7430
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5117 - accuracy: 0.8161
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4648 - accuracy: 0.8367
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4342 - accuracy: 0.8473
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4171 - accuracy: 0.8525
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4030 - accuracy: 0.8587
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3919 - accuracy: 0.8628
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3833 - accuracy: 0.8646
+Epoch 9/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3758 - accuracy: 0.8661
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3702 - accuracy: 0.8707
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6964 - accuracy: 0.7492  
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5059 - accuracy: 0.8203
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4603 - accuracy: 0.8365
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4330 - accuracy: 0.8483
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4194 - accuracy: 0.8519
+Epoch 6/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.4072 - accuracy: 0.8564
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3934 - accuracy: 0.8612
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3896 - accuracy: 0.8636
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3799 - accuracy: 0.8655
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3741 - accuracy: 0.8689
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6828 - accuracy: 0.7559
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5023 - accuracy: 0.8207
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4573 - accuracy: 0.8399
+Epoch 4/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.4321 - accuracy: 0.8476
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4172 - accuracy: 0.8526
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4043 - accuracy: 0.8571
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3932 - accuracy: 0.8615
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3857 - accuracy: 0.8637
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3746 - accuracy: 0.8666
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3751 - accuracy: 0.8676
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.7129 - accuracy: 0.7420
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5046 - accuracy: 0.8204
+Epoch 3/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.4562 - accuracy: 0.8387
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4265 - accuracy: 0.8501
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4086 - accuracy: 0.8558
+Epoch 6/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.3965 - accuracy: 0.8608
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3873 - accuracy: 0.8644
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3796 - accuracy: 0.8665
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3743 - accuracy: 0.8687
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3667 - accuracy: 0.8706
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6961 - accuracy: 0.7521
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4996 - accuracy: 0.8231
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4487 - accuracy: 0.8432
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4256 - accuracy: 0.8502
+Epoch 5/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4048 - accuracy: 0.8574
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3966 - accuracy: 0.8589
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3866 - accuracy: 0.8637
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3790 - accuracy: 0.8661
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3692 - accuracy: 0.8703
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3682 - accuracy: 0.8704
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 2.0823 - accuracy: 0.2446
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.4748 - accuracy: 0.4500
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.2357 - accuracy: 0.5309
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.1075 - accuracy: 0.5847
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0128 - accuracy: 0.6257
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9409 - accuracy: 0.6524
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8912 - accuracy: 0.6668
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8548 - accuracy: 0.6848
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8258 - accuracy: 0.6937
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8079 - accuracy: 0.6993
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 2.1870 - accuracy: 0.2175
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.6131 - accuracy: 0.4081
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.2847 - accuracy: 0.5100
+Epoch 4/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.1378 - accuracy: 0.5682
+Epoch 5/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.0394 - accuracy: 0.6050
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9807 - accuracy: 0.6292
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9314 - accuracy: 0.6471
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8935 - accuracy: 0.6625
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8645 - accuracy: 0.6720
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8353 - accuracy: 0.6833
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.0847 - accuracy: 0.2451  
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.4558 - accuracy: 0.4499
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.1948 - accuracy: 0.5421
+Epoch 4/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.0650 - accuracy: 0.5950
+Epoch 5/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.9800 - accuracy: 0.6306
+Epoch 6/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.9262 - accuracy: 0.6511
+Epoch 7/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8848 - accuracy: 0.6666
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8550 - accuracy: 0.6776
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8344 - accuracy: 0.6861
+Epoch 10/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8179 - accuracy: 0.6931
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 2.0172 - accuracy: 0.2645
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.4350 - accuracy: 0.4572
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 1.2160 - accuracy: 0.5407
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0945 - accuracy: 0.5874
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0085 - accuracy: 0.6201
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9532 - accuracy: 0.6435
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9024 - accuracy: 0.6601
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8732 - accuracy: 0.6730
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8427 - accuracy: 0.6814
+Epoch 10/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8230 - accuracy: 0.6905
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 4ms/step - loss: 2.0133 - accuracy: 0.2720
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.4449 - accuracy: 0.4548
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.2246 - accuracy: 0.5393
+Epoch 4/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.1073 - accuracy: 0.5851
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0259 - accuracy: 0.6182
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9748 - accuracy: 0.6326
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9284 - accuracy: 0.6522
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8945 - accuracy: 0.6658
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8657 - accuracy: 0.6731
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8412 - accuracy: 0.6832
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5749 - accuracy: 0.7926  
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4209 - accuracy: 0.8512
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3837 - accuracy: 0.8639
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3582 - accuracy: 0.8723
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3391 - accuracy: 0.8786
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3267 - accuracy: 0.8821
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3158 - accuracy: 0.8866
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3085 - accuracy: 0.8880
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3003 - accuracy: 0.8916
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.2955 - accuracy: 0.8918
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5788 - accuracy: 0.7923
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4173 - accuracy: 0.8523
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3804 - accuracy: 0.8637
+Epoch 4/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.3578 - accuracy: 0.8715
+Epoch 5/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.3400 - accuracy: 0.8773
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3289 - accuracy: 0.8804
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3181 - accuracy: 0.8850
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3103 - accuracy: 0.8881
+Epoch 9/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3048 - accuracy: 0.8888
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.2951 - accuracy: 0.8931
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5765 - accuracy: 0.7938
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4205 - accuracy: 0.8516
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3767 - accuracy: 0.8673
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3566 - accuracy: 0.8743
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3409 - accuracy: 0.8777
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3278 - accuracy: 0.8818
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3133 - accuracy: 0.8876
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3090 - accuracy: 0.8889
+Epoch 9/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.2991 - accuracy: 0.8913
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.2939 - accuracy: 0.8931
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5901 - accuracy: 0.7880
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4213 - accuracy: 0.8518
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3839 - accuracy: 0.8638
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3576 - accuracy: 0.8716
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3415 - accuracy: 0.8770
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3262 - accuracy: 0.8808
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3169 - accuracy: 0.8858
+Epoch 8/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.3066 - accuracy: 0.8872
+Epoch 9/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3000 - accuracy: 0.8905
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.2925 - accuracy: 0.8945
+375/375 [==============================] - 1s 3ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 17s 5ms/step - loss: 0.5778 - accuracy: 0.7913
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4212 - accuracy: 0.8494
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3788 - accuracy: 0.8647
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3560 - accuracy: 0.8729
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3399 - accuracy: 0.8767
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3275 - accuracy: 0.8816
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3147 - accuracy: 0.8869
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3092 - accuracy: 0.8896
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3025 - accuracy: 0.8892
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.2908 - accuracy: 0.8947
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5969 - accuracy: 0.7847
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4782 - accuracy: 0.8304
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4554 - accuracy: 0.8389
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4459 - accuracy: 0.8448
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4380 - accuracy: 0.8467
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4348 - accuracy: 0.8471
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4338 - accuracy: 0.8482
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4295 - accuracy: 0.8496
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4285 - accuracy: 0.8502
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4249 - accuracy: 0.8499
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5951 - accuracy: 0.7872
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4814 - accuracy: 0.8307
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4583 - accuracy: 0.8381
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4481 - accuracy: 0.8435
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4401 - accuracy: 0.8450
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4394 - accuracy: 0.8435
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4363 - accuracy: 0.8464
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4326 - accuracy: 0.8479
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4299 - accuracy: 0.8481
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4299 - accuracy: 0.8484
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5887 - accuracy: 0.7899
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4755 - accuracy: 0.8334
+Epoch 3/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.4519 - accuracy: 0.8403
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4409 - accuracy: 0.8469
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4346 - accuracy: 0.8471
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4276 - accuracy: 0.8497
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4265 - accuracy: 0.8525
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4239 - accuracy: 0.8514
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4285 - accuracy: 0.8522
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4219 - accuracy: 0.8527
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5866 - accuracy: 0.7904
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4713 - accuracy: 0.8335
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4547 - accuracy: 0.8387
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4474 - accuracy: 0.8443
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4325 - accuracy: 0.8487
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4311 - accuracy: 0.8479
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4247 - accuracy: 0.8510
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4284 - accuracy: 0.8508
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4238 - accuracy: 0.8501
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4207 - accuracy: 0.8534
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5913 - accuracy: 0.7892  
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4725 - accuracy: 0.8334
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4527 - accuracy: 0.8415
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4437 - accuracy: 0.8424
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4357 - accuracy: 0.8471
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4337 - accuracy: 0.8473
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4241 - accuracy: 0.8511
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4298 - accuracy: 0.8479
+Epoch 9/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.4234 - accuracy: 0.8503
+Epoch 10/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.4198 - accuracy: 0.8537
+375/375 [==============================] - 1s 3ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 17s 5ms/step - loss: 0.9081 - accuracy: 0.6606  
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6861 - accuracy: 0.7370
+Epoch 3/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.6336 - accuracy: 0.7568
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6029 - accuracy: 0.7701
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5833 - accuracy: 0.7812
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5691 - accuracy: 0.7856
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5650 - accuracy: 0.7889
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5527 - accuracy: 0.7889
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5452 - accuracy: 0.7953
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5403 - accuracy: 0.7970
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.8968 - accuracy: 0.6669
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6914 - accuracy: 0.7357
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6436 - accuracy: 0.7562
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6112 - accuracy: 0.7680
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5791 - accuracy: 0.7823
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5661 - accuracy: 0.7899
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5568 - accuracy: 0.7939
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5506 - accuracy: 0.7926
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5464 - accuracy: 0.7958
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5474 - accuracy: 0.7944
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.9021 - accuracy: 0.6541
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.7073 - accuracy: 0.7261
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6536 - accuracy: 0.7488
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6228 - accuracy: 0.7600
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6047 - accuracy: 0.7675
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5957 - accuracy: 0.7758
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5776 - accuracy: 0.7828
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5723 - accuracy: 0.7856
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5647 - accuracy: 0.7900
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5651 - accuracy: 0.7881
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.9440 - accuracy: 0.6418
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.7105 - accuracy: 0.7303
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6644 - accuracy: 0.7500
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6317 - accuracy: 0.7628
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6129 - accuracy: 0.7698
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5971 - accuracy: 0.7769
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5855 - accuracy: 0.7825
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5734 - accuracy: 0.7853
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5674 - accuracy: 0.7891
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5625 - accuracy: 0.7916
+375/375 [==============================] - 1s 3ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.8400 - accuracy: 0.6820  
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6763 - accuracy: 0.7377
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6332 - accuracy: 0.7540
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6132 - accuracy: 0.7647
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5923 - accuracy: 0.7727
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5744 - accuracy: 0.7787
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5631 - accuracy: 0.7867
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5572 - accuracy: 0.7883
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5545 - accuracy: 0.7912
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5421 - accuracy: 0.7948
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.9226 - accuracy: 0.6668  
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6167 - accuracy: 0.7714
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5450 - accuracy: 0.8013
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5053 - accuracy: 0.8149
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4756 - accuracy: 0.8266
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4482 - accuracy: 0.8371
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4320 - accuracy: 0.8432
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4136 - accuracy: 0.8489
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3990 - accuracy: 0.8552
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3870 - accuracy: 0.8592
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.9228 - accuracy: 0.6660
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6097 - accuracy: 0.7765
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5319 - accuracy: 0.8065
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4877 - accuracy: 0.8227
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4534 - accuracy: 0.8355
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4356 - accuracy: 0.8431
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4132 - accuracy: 0.8496
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3975 - accuracy: 0.8577
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3831 - accuracy: 0.8603
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3762 - accuracy: 0.8630
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.9272 - accuracy: 0.6688
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6064 - accuracy: 0.7745
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5321 - accuracy: 0.8048
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4901 - accuracy: 0.8198
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4532 - accuracy: 0.8359
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4267 - accuracy: 0.8458
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4070 - accuracy: 0.8534
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3894 - accuracy: 0.8603
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3786 - accuracy: 0.8654
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3645 - accuracy: 0.8693
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.9209 - accuracy: 0.6634  
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6159 - accuracy: 0.7728
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5433 - accuracy: 0.7998
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4991 - accuracy: 0.8177
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4668 - accuracy: 0.8296
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4430 - accuracy: 0.8391
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4206 - accuracy: 0.8483
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4050 - accuracy: 0.8543
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3934 - accuracy: 0.8578
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3807 - accuracy: 0.8634
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.9214 - accuracy: 0.6691  
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6091 - accuracy: 0.7774
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5314 - accuracy: 0.8036
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4889 - accuracy: 0.8226
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4580 - accuracy: 0.8350
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4317 - accuracy: 0.8450
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4125 - accuracy: 0.8510
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3958 - accuracy: 0.8577
+Epoch 9/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.3866 - accuracy: 0.8618
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.3727 - accuracy: 0.8659
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.3826 - accuracy: 0.4791  
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8806 - accuracy: 0.6667
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7806 - accuracy: 0.7055
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7216 - accuracy: 0.7277
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6906 - accuracy: 0.7396
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6682 - accuracy: 0.7482
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6417 - accuracy: 0.7567
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6271 - accuracy: 0.7621
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6217 - accuracy: 0.7636
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5996 - accuracy: 0.7724
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 1.5290 - accuracy: 0.4303
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9417 - accuracy: 0.6475
+Epoch 3/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8024 - accuracy: 0.7009
+Epoch 4/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.7446 - accuracy: 0.7217
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7098 - accuracy: 0.7351
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6826 - accuracy: 0.7441
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6604 - accuracy: 0.7527
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6469 - accuracy: 0.7561
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6306 - accuracy: 0.7630
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6151 - accuracy: 0.7696
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.3389 - accuracy: 0.5034
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8461 - accuracy: 0.6830
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7500 - accuracy: 0.7194
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7008 - accuracy: 0.7371
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6685 - accuracy: 0.7500
+Epoch 6/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.6505 - accuracy: 0.7567
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6286 - accuracy: 0.7673
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6137 - accuracy: 0.7724
+Epoch 9/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.6015 - accuracy: 0.7760
+Epoch 10/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.5877 - accuracy: 0.7848
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.4628 - accuracy: 0.4586
+Epoch 2/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8666 - accuracy: 0.6781
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7637 - accuracy: 0.7149
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7146 - accuracy: 0.7322
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6847 - accuracy: 0.7440
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6595 - accuracy: 0.7511
+Epoch 7/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.6411 - accuracy: 0.7592
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6208 - accuracy: 0.7663
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6077 - accuracy: 0.7710
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5941 - accuracy: 0.7784
+375/375 [==============================] - 1s 1ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.4910 - accuracy: 0.4304
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0096 - accuracy: 0.6109
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8792 - accuracy: 0.6635
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8102 - accuracy: 0.6909
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7577 - accuracy: 0.7094
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7233 - accuracy: 0.7221
+Epoch 7/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.6972 - accuracy: 0.7348
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6778 - accuracy: 0.7428
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6518 - accuracy: 0.7519
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6401 - accuracy: 0.7536
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.3530 - accuracy: 0.1138
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.2524 - accuracy: 0.1571
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.1664 - accuracy: 0.2210
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.0742 - accuracy: 0.2864
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.9642 - accuracy: 0.3466
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.8446 - accuracy: 0.3888
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.7316 - accuracy: 0.4265
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.6306 - accuracy: 0.4544
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.5521 - accuracy: 0.4767
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.4883 - accuracy: 0.4931
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.2818 - accuracy: 0.1465
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.1912 - accuracy: 0.1998
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.1073 - accuracy: 0.2550
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.0141 - accuracy: 0.3076
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.9146 - accuracy: 0.3474
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.8110 - accuracy: 0.3834
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.7089 - accuracy: 0.4158
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.6182 - accuracy: 0.4423
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.5474 - accuracy: 0.4648
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.4860 - accuracy: 0.4849
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.3784 - accuracy: 0.0901
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.2936 - accuracy: 0.1247
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.2486 - accuracy: 0.1586
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.2020 - accuracy: 0.2004
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.1475 - accuracy: 0.2439
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.0775 - accuracy: 0.2857
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 1.9848 - accuracy: 0.3341
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 1.8771 - accuracy: 0.3762
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.7655 - accuracy: 0.4099
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.6560 - accuracy: 0.4449
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 2.3380 - accuracy: 0.1144
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.2375 - accuracy: 0.1549
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.1463 - accuracy: 0.2126
+Epoch 4/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 2.0362 - accuracy: 0.2761
+Epoch 5/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 1.9118 - accuracy: 0.3334
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.7840 - accuracy: 0.3769
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.6759 - accuracy: 0.4119
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.5888 - accuracy: 0.4370
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.5253 - accuracy: 0.4540
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.4698 - accuracy: 0.4670
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.3053 - accuracy: 0.1348
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.2304 - accuracy: 0.1738
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.1744 - accuracy: 0.2197
+Epoch 4/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 2.1043 - accuracy: 0.2686
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.0193 - accuracy: 0.3104
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.9196 - accuracy: 0.3544
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.8139 - accuracy: 0.3876
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.7158 - accuracy: 0.4132
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.6381 - accuracy: 0.4351
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.5639 - accuracy: 0.4564
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.0895 - accuracy: 0.2538
+Epoch 2/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.4597 - accuracy: 0.4578
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.1518 - accuracy: 0.5712
+Epoch 4/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.0121 - accuracy: 0.6243
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9409 - accuracy: 0.6507
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8900 - accuracy: 0.6699
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8543 - accuracy: 0.6830
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8299 - accuracy: 0.6905
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8121 - accuracy: 0.6954
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7932 - accuracy: 0.7027
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.9793 - accuracy: 0.2634
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.4135 - accuracy: 0.4339
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.2418 - accuracy: 0.5012
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.1469 - accuracy: 0.5482
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0712 - accuracy: 0.5824
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0248 - accuracy: 0.6031
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9731 - accuracy: 0.6242
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9402 - accuracy: 0.6384
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9088 - accuracy: 0.6511
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8852 - accuracy: 0.6607
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.9143 - accuracy: 0.2850
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.3496 - accuracy: 0.4790
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.1320 - accuracy: 0.5663
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0263 - accuracy: 0.6088
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9601 - accuracy: 0.6342
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9139 - accuracy: 0.6554
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8831 - accuracy: 0.6699
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8555 - accuracy: 0.6802
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8276 - accuracy: 0.6900
+Epoch 10/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8095 - accuracy: 0.6975
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.0965 - accuracy: 0.2190
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.5175 - accuracy: 0.4155
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.2708 - accuracy: 0.5003
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.1515 - accuracy: 0.5455
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0813 - accuracy: 0.5811
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0312 - accuracy: 0.5996
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9799 - accuracy: 0.6205
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9495 - accuracy: 0.6311
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9323 - accuracy: 0.6415
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9137 - accuracy: 0.6456
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.1195 - accuracy: 0.2136
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.5057 - accuracy: 0.4466
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.1946 - accuracy: 0.5606
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0615 - accuracy: 0.6090
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9802 - accuracy: 0.6360
+Epoch 6/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.9315 - accuracy: 0.6521
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8942 - accuracy: 0.6669
+Epoch 8/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8709 - accuracy: 0.6743
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8501 - accuracy: 0.6801
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8395 - accuracy: 0.6847
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.5371 - accuracy: 0.4435  
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0566 - accuracy: 0.6159
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9246 - accuracy: 0.6613
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8472 - accuracy: 0.6884
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8029 - accuracy: 0.7052
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7694 - accuracy: 0.7139
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7446 - accuracy: 0.7239
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7238 - accuracy: 0.7314
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7107 - accuracy: 0.7358
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6923 - accuracy: 0.7409
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.6774 - accuracy: 0.4113
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.1021 - accuracy: 0.6070
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9307 - accuracy: 0.6672
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8382 - accuracy: 0.7002
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7922 - accuracy: 0.7143
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7527 - accuracy: 0.7262
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7225 - accuracy: 0.7357
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7028 - accuracy: 0.7460
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6859 - accuracy: 0.7504
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6684 - accuracy: 0.7564
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.5880 - accuracy: 0.4353
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0243 - accuracy: 0.6344
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8811 - accuracy: 0.6866
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8137 - accuracy: 0.7070
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7661 - accuracy: 0.7236
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7350 - accuracy: 0.7328
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7163 - accuracy: 0.7403
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6956 - accuracy: 0.7492
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6818 - accuracy: 0.7513
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6656 - accuracy: 0.7584
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.6074 - accuracy: 0.4461
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0117 - accuracy: 0.6473
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8644 - accuracy: 0.6925
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7909 - accuracy: 0.7151
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7521 - accuracy: 0.7290
+Epoch 6/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.7211 - accuracy: 0.7376
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6992 - accuracy: 0.7468
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6852 - accuracy: 0.7505
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6734 - accuracy: 0.7553
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6551 - accuracy: 0.7617
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.6056 - accuracy: 0.4340
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0200 - accuracy: 0.6431
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8761 - accuracy: 0.6896
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8017 - accuracy: 0.7139
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7621 - accuracy: 0.7269
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7295 - accuracy: 0.7352
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.7099 - accuracy: 0.7413
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6860 - accuracy: 0.7499
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6784 - accuracy: 0.7523
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6635 - accuracy: 0.7569
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 4ms/step - loss: 2.2387 - accuracy: 0.1768
+Epoch 2/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.8177 - accuracy: 0.3639
+Epoch 3/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.3625 - accuracy: 0.4876
+Epoch 4/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.1894 - accuracy: 0.5480
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0830 - accuracy: 0.5917
+Epoch 6/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.0105 - accuracy: 0.6204
+Epoch 7/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.9568 - accuracy: 0.6410
+Epoch 8/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.9178 - accuracy: 0.6545
+Epoch 9/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8837 - accuracy: 0.6707
+Epoch 10/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8524 - accuracy: 0.6775
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.2290 - accuracy: 0.1784
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.7702 - accuracy: 0.3655
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.3529 - accuracy: 0.4849
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.1885 - accuracy: 0.5417
+Epoch 5/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.0893 - accuracy: 0.5869
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0130 - accuracy: 0.6183
+Epoch 7/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.9583 - accuracy: 0.6421
+Epoch 8/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.9121 - accuracy: 0.6596
+Epoch 9/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8778 - accuracy: 0.6718
+Epoch 10/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8540 - accuracy: 0.6837
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 4ms/step - loss: 2.2185 - accuracy: 0.1900
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.7278 - accuracy: 0.3845
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.3518 - accuracy: 0.4906
+Epoch 4/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.1959 - accuracy: 0.5464
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.1030 - accuracy: 0.5860
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0329 - accuracy: 0.6113
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9741 - accuracy: 0.6364
+Epoch 8/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.9304 - accuracy: 0.6539
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9015 - accuracy: 0.6633
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8694 - accuracy: 0.6757
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 2.1721 - accuracy: 0.1910
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.6259 - accuracy: 0.4053
+Epoch 3/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.3153 - accuracy: 0.4955
+Epoch 4/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.1852 - accuracy: 0.5407
+Epoch 5/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.1028 - accuracy: 0.5757
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0495 - accuracy: 0.5972
+Epoch 7/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.0025 - accuracy: 0.6162
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9641 - accuracy: 0.6335
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.9244 - accuracy: 0.6501
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8955 - accuracy: 0.6634
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 14s 4ms/step - loss: 2.1890 - accuracy: 0.2076
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.6676 - accuracy: 0.4015
+Epoch 3/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 1.3266 - accuracy: 0.4979
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.1778 - accuracy: 0.5562
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0836 - accuracy: 0.5929
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 1.0143 - accuracy: 0.6228
+Epoch 7/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.9568 - accuracy: 0.6403
+Epoch 8/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.9176 - accuracy: 0.6605
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.8830 - accuracy: 0.6697
+Epoch 10/10
+3000/3000 [==============================] - 13s 4ms/step - loss: 0.8504 - accuracy: 0.6827
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.8979 - accuracy: 0.6811
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6456 - accuracy: 0.7655
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5926 - accuracy: 0.7873
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5619 - accuracy: 0.8000
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5444 - accuracy: 0.8078
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5339 - accuracy: 0.8140
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5194 - accuracy: 0.8198
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5135 - accuracy: 0.8215
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5031 - accuracy: 0.8246
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4992 - accuracy: 0.8245
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.8726 - accuracy: 0.6923  
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6417 - accuracy: 0.7678
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5930 - accuracy: 0.7869
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5642 - accuracy: 0.7994
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5463 - accuracy: 0.8063
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5322 - accuracy: 0.8123
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5237 - accuracy: 0.8173
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5169 - accuracy: 0.8196
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5063 - accuracy: 0.8216
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5032 - accuracy: 0.8259
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.9212 - accuracy: 0.6730
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6392 - accuracy: 0.7696
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5872 - accuracy: 0.7921
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5570 - accuracy: 0.8040
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5372 - accuracy: 0.8105
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5202 - accuracy: 0.8170
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5132 - accuracy: 0.8205
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5048 - accuracy: 0.8255
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4992 - accuracy: 0.8275
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4945 - accuracy: 0.8285
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.9070 - accuracy: 0.6785
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6398 - accuracy: 0.7711
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5928 - accuracy: 0.7908
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5620 - accuracy: 0.8036
+Epoch 5/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5368 - accuracy: 0.8135
+Epoch 6/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5269 - accuracy: 0.8181
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5141 - accuracy: 0.8215
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5088 - accuracy: 0.8227
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.4965 - accuracy: 0.8274
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4933 - accuracy: 0.8296
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 8) 80
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 8) 0
+)
+
+dropout (Dropout) (None, 13, 13, 8) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 16) 1168
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 16) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 16) 0
+
+flatten (Flatten) (None, 400) 0
+
+dense (Dense) (None, 32) 12832
+
+dropout_2 (Dropout) (None, 32) 0
+
+dense_1 (Dense) (None, 10) 330
+
+=================================================================
+Total params: 14,410
+Trainable params: 14,410
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.8988 - accuracy: 0.6807
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6341 - accuracy: 0.7720
+Epoch 3/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5887 - accuracy: 0.7913
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5607 - accuracy: 0.8021
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5418 - accuracy: 0.8089
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5230 - accuracy: 0.8177
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5145 - accuracy: 0.8203
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.5059 - accuracy: 0.8226
+Epoch 9/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4969 - accuracy: 0.8264
+Epoch 10/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.4922 - accuracy: 0.8307
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 21s 7ms/step - loss: 0.6796 - accuracy: 0.7542
+Epoch 2/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6407 - accuracy: 0.7702
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6312 - accuracy: 0.7753
+Epoch 4/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6298 - accuracy: 0.7717
+Epoch 5/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6144 - accuracy: 0.7796
+Epoch 6/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6099 - accuracy: 0.7812
+Epoch 7/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6104 - accuracy: 0.7824
+Epoch 8/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6079 - accuracy: 0.7818
+Epoch 9/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6127 - accuracy: 0.7811
+Epoch 10/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6115 - accuracy: 0.7804
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6888 - accuracy: 0.7482
+Epoch 2/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6404 - accuracy: 0.7682
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6245 - accuracy: 0.7750
+Epoch 4/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6229 - accuracy: 0.7732
+Epoch 5/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6205 - accuracy: 0.7769
+Epoch 6/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6110 - accuracy: 0.7785
+Epoch 7/10
+3000/3000 [==============================] - 14s 5ms/step - loss: 0.6113 - accuracy: 0.7814
+Epoch 8/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6090 - accuracy: 0.7822
+Epoch 9/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.6033 - accuracy: 0.7806
+Epoch 10/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6179 - accuracy: 0.7772
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 17s 5ms/step - loss: 0.6831 - accuracy: 0.7527
+Epoch 2/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.6357 - accuracy: 0.7715
+Epoch 3/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6267 - accuracy: 0.7743
+Epoch 4/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6200 - accuracy: 0.7786
+Epoch 5/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6208 - accuracy: 0.7757
+Epoch 6/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.6267 - accuracy: 0.7749
+Epoch 7/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6185 - accuracy: 0.7756
+Epoch 8/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6044 - accuracy: 0.7829
+Epoch 9/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6069 - accuracy: 0.7811
+Epoch 10/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6121 - accuracy: 0.7817
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6930 - accuracy: 0.7494
+Epoch 2/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6610 - accuracy: 0.7579
+Epoch 3/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6498 - accuracy: 0.7645
+Epoch 4/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6269 - accuracy: 0.7691
+Epoch 5/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6279 - accuracy: 0.7712
+Epoch 6/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6213 - accuracy: 0.7751
+Epoch 7/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6174 - accuracy: 0.7771
+Epoch 8/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6185 - accuracy: 0.7766
+Epoch 9/10
+3000/3000 [==============================] - 19s 6ms/step - loss: 0.6021 - accuracy: 0.7834
+Epoch 10/10
+3000/3000 [==============================] - 19s 6ms/step - loss: 0.6157 - accuracy: 0.7769
+375/375 [==============================] - 1s 3ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 17s 5ms/step - loss: 0.6800 - accuracy: 0.7544  
+Epoch 2/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6384 - accuracy: 0.7695
+Epoch 3/10
+3000/3000 [==============================] - 18s 6ms/step - loss: 0.6366 - accuracy: 0.7682
+Epoch 4/10
+3000/3000 [==============================] - 20s 7ms/step - loss: 0.6267 - accuracy: 0.7720
+Epoch 5/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6338 - accuracy: 0.7715
+Epoch 6/10
+3000/3000 [==============================] - 18s 6ms/step - loss: 0.6246 - accuracy: 0.7702
+Epoch 7/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.6258 - accuracy: 0.7725
+Epoch 8/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6093 - accuracy: 0.7808
+Epoch 9/10
+3000/3000 [==============================] - 20s 7ms/step - loss: 0.6115 - accuracy: 0.7797
+Epoch 10/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6060 - accuracy: 0.7821
+375/375 [==============================] - 1s 3ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 19s 6ms/step - loss: 0.9750 - accuracy: 0.6582
+Epoch 2/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.6672 - accuracy: 0.7574
+Epoch 3/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.6032 - accuracy: 0.7795
+Epoch 4/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.5614 - accuracy: 0.7973
+Epoch 5/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.5373 - accuracy: 0.8086
+Epoch 6/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.5112 - accuracy: 0.8166
+Epoch 7/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.4973 - accuracy: 0.8221
+Epoch 8/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.4806 - accuracy: 0.8313
+Epoch 9/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.4718 - accuracy: 0.8336
+Epoch 10/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.4629 - accuracy: 0.8384
+375/375 [==============================] - 1s 3ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 17s 5ms/step - loss: 0.9778 - accuracy: 0.6623
+Epoch 2/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.6573 - accuracy: 0.7613
+Epoch 3/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.5904 - accuracy: 0.7875
+Epoch 4/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.5513 - accuracy: 0.8011
+Epoch 5/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.5235 - accuracy: 0.8140
+Epoch 6/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.5013 - accuracy: 0.8235
+Epoch 7/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.4865 - accuracy: 0.8256
+Epoch 8/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.4735 - accuracy: 0.8329
+Epoch 9/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.4618 - accuracy: 0.8362
+Epoch 10/10
+3000/3000 [==============================] - 15s 5ms/step - loss: 0.4517 - accuracy: 0.8388
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 16s 5ms/step - loss: 0.9983 - accuracy: 0.6553
+Epoch 2/10
+3000/3000 [==============================] - 18s 6ms/step - loss: 0.6749 - accuracy: 0.7566
+Epoch 3/10
+3000/3000 [==============================] - 19s 6ms/step - loss: 0.6028 - accuracy: 0.7824
+Epoch 4/10
+3000/3000 [==============================] - 22s 7ms/step - loss: 0.5598 - accuracy: 0.7990
+Epoch 5/10
+3000/3000 [==============================] - 19s 6ms/step - loss: 0.5332 - accuracy: 0.8108
+Epoch 6/10
+3000/3000 [==============================] - 20s 7ms/step - loss: 0.5129 - accuracy: 0.8191
+Epoch 7/10
+3000/3000 [==============================] - 20s 7ms/step - loss: 0.4946 - accuracy: 0.8250
+Epoch 8/10
+3000/3000 [==============================] - 18s 6ms/step - loss: 0.4809 - accuracy: 0.8300
+Epoch 9/10
+3000/3000 [==============================] - 19s 6ms/step - loss: 0.4685 - accuracy: 0.8353
+Epoch 10/10
+3000/3000 [==============================] - 18s 6ms/step - loss: 0.4601 - accuracy: 0.8378
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 17s 5ms/step - loss: 1.0026 - accuracy: 0.6430
+Epoch 2/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.6653 - accuracy: 0.7583
+Epoch 3/10
+3000/3000 [==============================] - 20s 7ms/step - loss: 0.5906 - accuracy: 0.7868
+Epoch 4/10
+3000/3000 [==============================] - 19s 6ms/step - loss: 0.5527 - accuracy: 0.8027
+Epoch 5/10
+3000/3000 [==============================] - 20s 7ms/step - loss: 0.5285 - accuracy: 0.8096
+Epoch 6/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.5063 - accuracy: 0.8205
+Epoch 7/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.4917 - accuracy: 0.8238
+Epoch 8/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.4769 - accuracy: 0.8302
+Epoch 9/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.4667 - accuracy: 0.8356
+Epoch 10/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.4588 - accuracy: 0.8385
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 16) 160
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 16) 0
+)
+
+dropout (Dropout) (None, 13, 13, 16) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 32) 4640
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 32) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 32) 0
+
+flatten (Flatten) (None, 800) 0
+
+dense (Dense) (None, 64) 51264
+
+dropout_2 (Dropout) (None, 64) 0
+
+dense_1 (Dense) (None, 10) 650
+
+=================================================================
+Total params: 56,714
+Trainable params: 56,714
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.9759 - accuracy: 0.6631
+Epoch 2/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.6599 - accuracy: 0.7610
+Epoch 3/10
+3000/3000 [==============================] - 18s 6ms/step - loss: 0.5914 - accuracy: 0.7875
+Epoch 4/10
+3000/3000 [==============================] - 20s 7ms/step - loss: 0.5492 - accuracy: 0.8011
+Epoch 5/10
+3000/3000 [==============================] - 20s 7ms/step - loss: 0.5179 - accuracy: 0.8141
+Epoch 6/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.4973 - accuracy: 0.8220
+Epoch 7/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.4786 - accuracy: 0.8306
+Epoch 8/10
+3000/3000 [==============================] - 17s 6ms/step - loss: 0.4676 - accuracy: 0.8355
+Epoch 9/10
+3000/3000 [==============================] - 18s 6ms/step - loss: 0.4553 - accuracy: 0.8399
+Epoch 10/10
+3000/3000 [==============================] - 18s 6ms/step - loss: 0.4448 - accuracy: 0.8443
+375/375 [==============================] - 1s 2ms/step
+Model: "sequential"
+
+---
+
+# Layer (type) Output Shape Param
+
+conv2d (Conv2D) (None, 26, 26, 32) 320
+
+max_pooling2d (MaxPooling2D (None, 13, 13, 32) 0
+)
+
+dropout (Dropout) (None, 13, 13, 32) 0
+
+conv2d_1 (Conv2D) (None, 11, 11, 64) 18496
+
+max_pooling2d_1 (MaxPooling (None, 5, 5, 64) 0
+2D)
+
+dropout_1 (Dropout) (None, 5, 5, 64) 0
+
+flatten (Flatten) (None, 1600) 0
+
+dense (Dense) (None, 128) 204928
+
+dropout_2 (Dropout) (None, 128) 0
+
+dense_1 (Dense) (None, 10) 1290
+
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+
+---
+
+Epoch 1/10
+3750/3750 [==============================] - 23s 6ms/step - loss: 0.5445 - accuracy: 0.8055
+Epoch 2/10
+3750/3750 [==============================] - 21s 6ms/step - loss: 0.3986 - accuracy: 0.8584
+Epoch 3/10
+3750/3750 [==============================] - 22s 6ms/step - loss: 0.3656 - accuracy: 0.8695
+Epoch 4/10
+3750/3750 [==============================] - 27s 7ms/step - loss: 0.3426 - accuracy: 0.8765
+Epoch 5/10
+3750/3750 [==============================] - 23s 6ms/step - loss: 0.3281 - accuracy: 0.8821
+Epoch 6/10
+3750/3750 [==============================] - 21s 6ms/step - loss: 0.3156 - accuracy: 0.8867
+Epoch 7/10
+3750/3750 [==============================] - 23s 6ms/step - loss: 0.3085 - accuracy: 0.8878
+Epoch 8/10
+3750/3750 [==============================] - 28s 7ms/step - loss: 0.2993 - accuracy: 0.8914
+Epoch 9/10
+3750/3750 [==============================] - 25s 7ms/step - loss: 0.2958 - accuracy: 0.8931
+Epoch 10/10
+3750/3750 [==============================] - 24s 6ms/step - loss: 0.2870 - accuracy: 0.8953
+RandomizedSearchCV(cv=StratifiedKFold(n*splits=5, random_state=None, shuffle=False),
+estimator=<keras.wrappers.scikit_learn.KerasClassifier object at 0x0000026814115F10>,
+n_iter=15, n_jobs=1,
+param_distributions={'activation_function': ['relu', 'tanh'],
+'layer_nodes': [8, 16, 32],
+'learning_rate': [0.001, 0.005, 0.0001,
+0.0005, 0.002],
+'optimizer': ['adam', 'sgd']},
+scoring='accuracy')
+cnn best params: {'optimizer': 'adam', 'learning_rate': 0.0005, 'layer_nodes': 32, 'activation_function': 'tanh'}
+Traceback (most recent call last):
+File "d:\studie\machine learning practical\Tijn_Amir_Naut\fashion_mnist\data\preprocessing.py", line 165, in <module>
+test_loss, test_accuracy = cnn_results.best_estimator*.etestuate(X_test.reshape(-1, 28, 28, 1), y_test)
+AttributeError: 'KerasClassifier' object has no attribute 'etestuate'
