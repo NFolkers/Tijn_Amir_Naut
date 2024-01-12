@@ -16,9 +16,12 @@ from keras.wrappers.scikit_learn import KerasClassifier
 from keras.optimizers import Adam, SGD
 from keras.backend import clear_session
 
+from sklearn.metrics import f1_score
+
+
 # check wether hardware optimization is working
-from tensorflow.python.client import device_lib
-print(device_lib.list_local_devices())
+# from tensorflow.python.client import device_lib
+# print(device_lib.list_local_devices())
 # import tensorflow as tf
 # physical_devices = tf.config.list_physical_devices('GPU')
 # tf.config.experimental.set_memory_growth(physical_devices[0], True)
@@ -35,6 +38,7 @@ if author == "Naut":
     X_test, y_test = mnist_reader.load_mnist('D:\\studie\\machine learning practical\\Tijn_Amir_Naut\\data', kind='t10k')
 
 
+
 # Shuffle the data
 X_train, y_train = shuffle(X_train, y_train, random_state=42)
 
@@ -43,30 +47,37 @@ X_train, y_train = shuffle(X_train, y_train, random_state=42)
 X_train = X_train.astype('float32') / 255
 X_test = X_test.astype('float32') / 255
 
-# # Data augmentation
-# datagen = ImageDataGenerator(
-#     rotation_range=10,  # Rotate images in the range
-#     width_shift_range=0.1, #  Shift images horizontally
-#     height_shift_range=0.1, # Shift images vertically
-#     shear_range=0.1, # Shear images 
-#     zoom_range=0.1, # Zoom image 
-#     horizontal_flip=True, # Flip images horizontally
-#     fill_mode='nearest' # Fill the new pixels
-# )
 
-# # Fitting the ImageDataGenerator
-# datagen.fit(X_train.reshape(-1, 28, 28, 1))
+# Data augmentation
+datagen = ImageDataGenerator(
+    rotation_range=10,  # Rotate images in the range
+    width_shift_range=0.1, #  Shift images horizontally
+    height_shift_range=0.1, # Shift images vertically
+    shear_range=0.1, # Shear images 
+    zoom_range=0.1, # Zoom image 
+    horizontal_flip=True, # Flip images horizontally
+    fill_mode='nearest' # Fill the new pixels
+)
 
-
-# X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2, random_state=42)
+# Fitting the ImageDataGenerator
+datagen.fit(X_train.reshape(-1, 28, 28, 1))
 
 
+X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2, random_state=42)
+
+# print(X_train[0].shape, "before flattening")
+# print(X_train[0])
 # # Flatten
 # X_train_flat = X_train.reshape(X_train.shape[0], -1)
 # X_test_flat = X_test.reshape(X_test.shape[0], -1)
 # X_test_flat = X_test.reshape(X_test.shape[0], -1)
 
+# print(X_train_flat[0].shape, "after flattening")
+# print(y_train[0].shape, "y train")
+# print(X_train_flat[0])
+# print(y_train[0])
 
+# input()
 
 # # SVM model
 # print("training SVM")
@@ -88,19 +99,39 @@ X_test = X_test.astype('float32') / 255
 # # svc_model.fit(X_train_flat, y_train)
 # # svc_results = svc_model
 
-# y_test_pred = svc_results.best_estimator_.predict(X_test_flat)
+# y_test_pred = svc_results.predict(X_test_flat)
 # svm_test_accuracy = accuracy_score(y_test, y_test_pred)
 
 # print("SVM Accuracy: ", svm_test_accuracy)
 
 # # Test set
-# y_test_pred = svc_results.best_estimator_.predict(X_test_flat)
+# y_test_pred = svc_results.predict(X_test_flat)
 
 # svm_test_accuracy = accuracy_score(y_test, y_test_pred)
 # print("SVM Test Accuracy: ", svm_test_accuracy)
 # print("svm best params: ", svc_results.best_params_)
 # print(svc_results)
 # print()
+
+# https://datascience.stackexchange.com/questions/45165/how-to-get-accuracy-f1-precision-and-recall-for-a-keras-model
+from keras import backend as K
+
+def recall_m(y_true, y_pred):
+    true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
+    possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
+    recall = true_positives / (possible_positives + K.epsilon())
+    return recall
+
+def precision_m(y_true, y_pred):
+    true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
+    predicted_positives = K.sum(K.round(K.clip(y_pred, 0, 1)))
+    precision = true_positives / (predicted_positives + K.epsilon())
+    return precision
+
+def f1_m(y_true, y_pred):
+    precision = precision_m(y_true, y_pred)
+    recall = recall_m(y_true, y_pred)
+    return 2*((precision*recall)/(precision+recall+K.epsilon()))
 
 # CNN model
 def buildModel(learning_rate = 0.001, layer_nodes=32, activation_function='relu', optimizer='adam'):
@@ -130,7 +161,7 @@ def buildModel(learning_rate = 0.001, layer_nodes=32, activation_function='relu'
     # Compile the model
     model.compile(loss='sparse_categorical_crossentropy',
                 optimizer=optimizer_algo,
-                metrics=['accuracy'])
+                metrics=['accuracy', f1_m,precision_m, recall_m])
     # print(model.get_params().keys())
     return model
 
@@ -144,39 +175,49 @@ params_cnn = {
 }
 
 
-hyper_parameter_search = False
+hyper_parameter_search = True
+hyper_parameter_results = None
 if hyper_parameter_search:
-    keras_classifier = KerasClassifier(build_fn=buildModel, epochs=10, batch_size=16, verbose=1)
+    keras_classifier = KerasClassifier(build_fn=buildModel, epochs=10, batch_size=16, verbose=2)
 
     kfold_cnn = StratifiedKFold(n_splits=5)
     # print(keras_classifier.get_params().keys())
 
     print("training CNN")
-    random_search = RandomizedSearchCV(estimator=keras_classifier, param_distributions=params_cnn, n_iter=15, cv=kfold_cnn, scoring='accuracy', n_jobs=1)
+    random_search = RandomizedSearchCV(estimator=keras_classifier, param_distributions=params_cnn, n_iter=15, cv=kfold_cnn, scoring='neg_log_loss', n_jobs=1)
 
     # Train the model with hyperparameter tuning
-    cnn_results = random_search.fit(X_train.reshape(-1, 28, 28, 1), y_train)
+    cnn_results_random_search = random_search.fit(X_train.reshape(-1, 28, 28, 1), y_train)
+    print("done\n\n\n")
+    print(cnn_results_random_search)
+    print("\n\n\n")
+    hyper_parameter_results = cnn_results_random_search
 
+hyper_parameter_search = False
 if not hyper_parameter_search:
-    model = buildModel(0.0005, 32, 'tanh', 'adam')
-    cnn_results = model.fit(X_train.reshape(-1, 28, 28, 1), y_train ,epochs=200, batch_size=16, verbose=1)
+    # model = buildModel(0.0005, 32, 'tanh', 'adam')
+    params = hyper_parameter_results.best_params_
+    model = buildModel(params['learning_rate'], params['layer_nodes'],params['activation_function'], params['optimizer'])
+    # cnn_results = model.fit(X_train_flat, y_train ,epochs=200, batch_size=16, verbose=1)
+    cnn_results = model.fit(X_train.reshape(-1, 28, 28, 1), y_train ,epochs=200, batch_size=16, verbose=2)
 
-print(cnn_results)
-print("cnn best params: ", cnn_results.best_params_)
-model.save(filepath="./model_save_cnn")
+model.save(filepath="./new_model_save_200_epochs_valLoss" )
+print()
+print(hyper_parameter_results)
+print("cnn best params: ", hyper_parameter_results.best_params_)
 
 # history = model.fit(X_train.reshape(-1, 28, 28, 1), y_train, epochs=epochs, testidation_data=(X_test.reshape(-1, 28, 28, 1), y_test))
 
 # Etestuate the model
-test_loss, test_accuracy = cnn_results.best_estimator_.etestuate(X_test.reshape(-1, 28, 28, 1), y_test)
+test_loss, test_accuracy = cnn_results.etestuate(X_test.reshape(-1, 28, 28, 1), y_test)
 print("CNN Test Accuracy: ", test_accuracy)
 
 # Visualize training results
-acc = cnn_results.best_estimator_.history['accuracy']
-test_acc = cnn_results.best_estimator_.history['test_accuracy']
+acc = cnn_results.history['accuracy']
+test_acc = cnn_results.history['test_accuracy']
 
-loss = cnn_results.best_estimator_.history['loss']
-test_loss = cnn_results.best_estimator_.history['test_loss']
+loss = cnn_results.history['loss']
+test_loss = cnn_results.history['test_loss']
 
 epochs_range = range(epochs)
 
