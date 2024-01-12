@@ -58,14 +58,15 @@ ai = network()
 def home():
     return {"health_check": "OK", "model_version": model_version}
 
-@app.post("/upload/")
+@app.post("/upload")
 async def create_upload_files(file: UploadFile = File(...)):
 
     # check for bad file uploads
+    print(file)
     print(file.filename)
     extension = file.filename[-4:]
     if extension != '.png' and extension != '.jpg' and extension != 'jpeg':
-        return {"Error code:422": "Please upload a valid image with extension jpg or png."}
+        return {"prediction": "null", "error": "Please upload a valid image with extension jpg or png."}
 
     # open file from POST operation
     file.filename = f"{uuid.uuid4()}.jpg"
@@ -83,8 +84,8 @@ async def create_upload_files(file: UploadFile = File(...)):
 
     return {"prediction": prediction}
 
-if __name__ == '__main__':
-    uvicorn.run("app.api:app", host="0.0.0.0", port=8000, reload=True)
+# if __name__ == '__main__':
+    # uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
 
 
 # data = Image.open("./shirt.png")
