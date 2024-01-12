@@ -1,4 +1,5 @@
 from fastapi import FastAPI, File, UploadFile
+from matplotlib.pylab import f
 from pydantic import BaseModel
 from model.model import preprocess, loadModel
 from model.model import __version__ as model_version
@@ -6,6 +7,8 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import numpy as np
 import mnist_reader
+import uuid
+import os
 
 
 app = FastAPI()
@@ -19,45 +22,56 @@ class network:
     def makePredictions(self, img):
         probs = (self.model.predict(img))
         chosen_class = np.argmax(probs)
-        print(self.mappings[chosen_class])
+        return self.mappings[chosen_class]
 
-    def process(self, image_array):
+    def preprocess_img(self, image_array):
         processed_images = preprocess(image_array)
         return processed_images
 
-
+    def pipeline(self, filename):
+        img = Image.open(f'./images/{filename}')
+        precessed_img = self.preprocess_img([img])
+        prediction = self.makePredictions(precessed_img)
+        return prediction
 
     text: str
 
-class ImageIn(BaseModel):
-    images: UploadFile
+ai = network()
 
 @app.get('/')
 def home():
     return {"health_check": "OK", "model_version": model_version}
 
-@app.post("/files/")
-async def create_files(images: bytes = File()):
-    return {"file_sizes": [len(file) for file in images]}
+@app.post("/upload/")
+async def create_upload_files(file: UploadFile = File(...)):
+
+    # check for bad file uploads
+    extension = file.filename[-4:]
+    if extension != '.png' and extension != '.jpg' and extension != 'jpeg':
+        return {"Error code:422": "Please upload a valid image with extension jpg or png."}
+
+    # open file from POST operation
+    file.filename = f"{uuid.uuid4()}.jpg"
+    contents = await file.read()
+
+    # store image to analyse it
+    with open(f"./images/{file.filename}", "wb") as f:
+        f.write(contents)
+    
+    # get prediction
+    prediction = ai.pipeline(file.filename)
+
+    # remove data from the server after making a prediction
+    os.remove(f"./images/{file.filename}")
+
+    return {"prediction": prediction}
 
 
-@app.post("/uploadfiles/")
-async def create_upload_files(images: UploadFile = File()):
-    return {"filenames": [file.filename for file in images]}
 
+# data = Image.open("./shirt.png")
+# processed_image = ai.preprocess_img([data])
 
-
-data = Image.open("./shirt.png")
-ai = network()
-processed_image = ai.process(np.array[data])
-
-
-# print(X_train[0])
-# print(processed_image[0])
-
-plt.imshow(processed_image[0], cmap=plt.cm.binary)
-plt.show()
-ai.makePredictions(processed_image)
+# ai.makePredictions(processed_image)
 
 
 # 0	T-shirt/top
