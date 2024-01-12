@@ -9,10 +9,26 @@ import numpy as np
 import mnist_reader
 import uuid
 import os
+from fastapi.middleware.cors import CORSMiddleware
+import uvicorn
 
 
 app = FastAPI()
 
+
+origins = [
+    "http://localhost:5173",
+    "localhost:5173"
+]
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 class network:
     def __init__(self) -> None:
@@ -46,6 +62,7 @@ def home():
 async def create_upload_files(file: UploadFile = File(...)):
 
     # check for bad file uploads
+    print(file.filename)
     extension = file.filename[-4:]
     if extension != '.png' and extension != '.jpg' and extension != 'jpeg':
         return {"Error code:422": "Please upload a valid image with extension jpg or png."}
@@ -66,6 +83,8 @@ async def create_upload_files(file: UploadFile = File(...)):
 
     return {"prediction": prediction}
 
+if __name__ == '__main__':
+    uvicorn.run("app.api:app", host="0.0.0.0", port=8000, reload=True)
 
 
 # data = Image.open("./shirt.png")

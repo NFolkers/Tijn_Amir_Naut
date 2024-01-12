@@ -8,11 +8,11 @@ const UploadFile = () => {
     setSelectedFile(event.target.files[0]);
   };
 
-  const handleUpload = () => {
+  const handleUpload = (selectedFile) => {
     const formData = new FormData();
     formData.append("file", selectedFile);
     axios
-      .post("/api/upload", formData)
+      .post("http://127.0.0.1:8000/upload", formData)
       .then((response) => {
         console.log(response.data);
       })
