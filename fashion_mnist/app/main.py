@@ -1,12 +1,8 @@
 from fastapi import FastAPI, File, UploadFile
-from matplotlib.pylab import f
-from pydantic import BaseModel
 from model.model import preprocess, loadModel
 from model.model import __version__ as model_version
 from PIL import Image
-import matplotlib.pyplot as plt
 import numpy as np
-import mnist_reader
 import uuid
 import os
 from fastapi.middleware.cors import CORSMiddleware
@@ -17,10 +13,9 @@ app = FastAPI()
 
 
 origins = [
-    "http://localhost:5173",
-    "localhost:5173"
+    "http://localhost:3000",
+    "localhost:3000"
 ]
-
 
 app.add_middleware(
     CORSMiddleware,
@@ -58,6 +53,8 @@ ai = network()
 def home():
     return {"health_check": "OK", "model_version": model_version}
 
+
+# retrieve a file from 
 @app.post("/upload")
 async def create_upload_files(file: UploadFile = File(...)):
 
@@ -83,15 +80,6 @@ async def create_upload_files(file: UploadFile = File(...)):
     os.remove(f"./images/{file.filename}")
 
     return {"prediction": prediction}
-
-# if __name__ == '__main__':
-    # uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
-
-
-# data = Image.open("./shirt.png")
-# processed_image = ai.preprocess_img([data])
-
-# ai.makePredictions(processed_image)
 
 
 # 0	T-shirt/top
