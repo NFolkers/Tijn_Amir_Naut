@@ -10,11 +10,10 @@ function App() {
 
   const handleStepChange = (str: string) => {
     setStep(str);
-    console.log(step);
   };
   const handleResponseChange = (res: string) => {
     setResponse(res);
-    console.log(response);
+    console.log(res);
     // console.log(JSON.stringify(res.prediction));
     if (res.prediction == "null") {
       handleStepChange("error");

@@ -29,7 +29,7 @@ const UploadFile = ({
     const formData = new FormData();
     formData.append("file", selectedFile);
     axios
-      .post("http://0.0.0.0:8000/upload", formData)
+      .post("http://localhost:8000/upload", formData)
       .then((response) => {
         responseSet(response.data);
       })

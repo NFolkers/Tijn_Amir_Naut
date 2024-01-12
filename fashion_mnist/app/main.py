@@ -59,8 +59,8 @@ def home():
 async def create_upload_files(file: UploadFile = File(...)):
 
     # check for bad file uploads
-    print(file)
-    print(file.filename)
+    # print(file)
+    # print(file.filename)
     extension = file.filename[-4:]
     if extension != '.png' and extension != '.jpg' and extension != 'jpeg':
         return {"prediction": "null", "error": "Please upload a valid image with extension jpg or png."}
