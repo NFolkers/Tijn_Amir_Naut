@@ -67,10 +67,10 @@ X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=
 
 # print(X_train[0].shape, "before flattening")
 # print(X_train[0])
-# # Flatten
-# X_train_flat = X_train.reshape(X_train.shape[0], -1)
-# X_test_flat = X_test.reshape(X_test.shape[0], -1)
-# X_test_flat = X_test.reshape(X_test.shape[0], -1)
+# Flatten
+X_train_flat = X_train.reshape(X_train.shape[0], -1)
+X_test_flat = X_test.reshape(X_test.shape[0], -1)
+X_test_flat = X_test.reshape(X_test.shape[0], -1)
 
 # print(X_train_flat[0].shape, "after flattening")
 # print(y_train[0].shape, "y train")
@@ -79,39 +79,39 @@ X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=
 
 # input()
 
-# # SVM model
-# print("training SVM")
-# def buildSVC(kernel_choice='linear', C=3):
-#     svm_model = SVC(kernel=kernel_choice, C=C)
-#     return svm_model
+# SVM model
+print("training SVM")
+def buildSVC(kernel_choice='linear', C=3):
+    svm_model = SVC(kernel=kernel_choice, C=C)
+    return svm_model
 
-# SVC_params = {
-#     'kernel': ['linear', 'rbf', 'poly'],
-#     'C': [0.0, 1.0, 3.0, 5.0, 7.0, 40.0]
-# }
+SVC_params = {
+    'kernel': ['linear', 'rbf', 'poly'],
+    'C': [0.0, 1.0, 3.0, 5.0, 7.0, 40.0]
+}
 
-# svc_model = buildSVC()
+svc_model = buildSVC()
 
-# kfold_svc = StratifiedKFold(n_splits=5)
-# svc_random_search = RandomizedSearchCV(estimator=svc_model, param_distributions=SVC_params, n_iter=15, cv=kfold_svc, scoring='accuracy', n_jobs=-1)
+kfold_svc = StratifiedKFold(n_splits=5)
+svc_random_search = RandomizedSearchCV(estimator=svc_model, param_distributions=SVC_params, n_iter=15, cv=kfold_svc, scoring='accuracy', n_jobs=-1)
 
-# svc_results = svc_random_search.fit(X_train_flat, y_train)
-# # svc_model.fit(X_train_flat, y_train)
-# # svc_results = svc_model
+svc_results = svc_random_search.fit(X_train_flat, y_train)
+# svc_model.fit(X_train_flat, y_train)
+# svc_results = svc_model
 
-# y_test_pred = svc_results.predict(X_test_flat)
-# svm_test_accuracy = accuracy_score(y_test, y_test_pred)
+y_test_pred = svc_results.predict(X_test_flat)
+svm_test_accuracy = accuracy_score(y_test, y_test_pred)
 
-# print("SVM Accuracy: ", svm_test_accuracy)
+print("SVM Accuracy: ", svm_test_accuracy)
 
-# # Test set
-# y_test_pred = svc_results.predict(X_test_flat)
+# Test set
+y_test_pred = svc_results.predict(X_test_flat)
 
-# svm_test_accuracy = accuracy_score(y_test, y_test_pred)
-# print("SVM Test Accuracy: ", svm_test_accuracy)
-# print("svm best params: ", svc_results.best_params_)
-# print(svc_results)
-# print()
+svm_test_accuracy = accuracy_score(y_test, y_test_pred)
+print("SVM Test Accuracy: ", svm_test_accuracy)
+print("svm best params: ", svc_results.best_params_)
+print(svc_results)
+print()
 
 # https://datascience.stackexchange.com/questions/45165/how-to-get-accuracy-f1-precision-and-recall-for-a-keras-model
 from keras import backend as K

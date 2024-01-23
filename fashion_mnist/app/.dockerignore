@@ -1,6 +1,6 @@
-/IML_api
-__pychache__/
-
+IML_api/
+*/__pychache__/
+# frontend/
 *.env
 *.env.*
 env.*

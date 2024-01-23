@@ -9,11 +9,11 @@ services:
 
   react:
     image: frontend-react
-
-    working_dir: /app/frontend/IML_frontend
+    build: .
+    working_dir: /frontend/IML_frontend
     volumes:
-      - ./frontend/IML_frontend:/app/frontend/IML_frontend
-    command: sh -c "npm install && npm run dev -- --port 3000"
+      - ./frontend/IML_frontend:/frontend/IML_frontend
+    # command: sh -c "npm install && npm run dev -- --port 3000"
     ports:
       - 3000:3000
     depends_on:
